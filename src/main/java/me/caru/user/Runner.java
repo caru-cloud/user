@@ -3,6 +3,7 @@ package me.caru.user;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Component;
 
 /**
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Component;
  * @version 1.0.0
  * @since 2018. 11. 20.
  */
+@RefreshScope
 @Component
 public class Runner implements ApplicationRunner {
 
