@@ -17,15 +17,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class Runner implements ApplicationRunner {
 
-	@Value("${a}")
-	private String a;
-
 	@Value("${spring.profiles.active}")
 	private String profile;
 
+	@Value("${management.endpoints.web.exposure.include}")
+	private String b;
+
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
-		System.out.println("a: " + a);
 		System.out.println("profile: " + profile);
+		System.out.println("b: " + b);
 	}
 }
