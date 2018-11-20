@@ -20,12 +20,12 @@ public class Runner implements ApplicationRunner {
 	@Value("${spring.profiles.active}")
 	private String profile;
 
-	@Value("${management.endpoints.web.exposure.include}")
-	private String b;
+	@Value("${a}")
+	private String a;
 
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 		System.out.println("profile: " + profile);
-		System.out.println("b: " + b);
+		System.out.println("a: " + a);
 	}
 }
